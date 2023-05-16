@@ -1,0 +1,15 @@
+<h1>Connexion</h1>
+
+<%= form_tag('/sessions', method: 'post') do %>
+  <!-- Ajoutez les champs de connexion ici -->
+  <%= label_tag :email, "Email:" %><br>
+  <%= text_field_tag :email %><br><br>
+
+  <%= label_tag :password, "Mot de passe:" %><br>
+  <%= password_field_tag :password %><br><br>
+
+  <%= submit_tag "Se connecter" %>
+<% end %>
+
+<p>Vous n'avez pas de compte? <%= link_to "En créer un", new_user_path %></p>
+

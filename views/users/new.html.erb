@@ -1,0 +1,17 @@
+<h1>Créer un compte</h1>
+
+<%= form_with model: @user, url: users_path, method: :post do |form| %>
+  <%= form.label :email, "Email:" %><br>
+  <%= form.email_field :email %><br><br>
+
+  <%= form.label :password, "Mot de passe:" %><br>
+  <%= form.password_field :password %><br><br>
+
+  <%= form.label :password_confirmation, "Confirmation du mot de passe:" %><br>
+  <%= form.password_field :password_confirmation %><br><br>
+
+  <%= form.label :first_name, "Prénom:" %><br>
+  <%= form.text_field :first_name %><br><br>
+
+  <%= form.label :last_name, "Nom:" %><br>
+  <%= form.text_field :last_name %><br><br>
